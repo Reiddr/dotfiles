@@ -1,0 +1,6 @@
+[user]
+	email = zechillfactor@gmail.com
+	name = Reiddr
+[alias]
+	lg = log --oneline --graph --decorate -10
+	st = status

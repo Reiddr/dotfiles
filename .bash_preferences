@@ -2,3 +2,4 @@
 # Aliases
 alias v='nvim'
 alias r='source ~/.bashrc'
+alias ll='ls -lAh'

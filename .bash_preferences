@@ -1,0 +1,4 @@
+
+# Aliases
+alias v='nvim'
+alias r='source ~/.bashrc'

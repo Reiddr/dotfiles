@@ -1,5 +1,13 @@
 
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=-1
+HISTFILESIZE=-1
+
 # Aliases
-alias v='nvim'
 alias r='source ~/.bashrc'
 alias ll='ls -lAh'
+alias rr='. ranger'
+alias v='nvim'
+alias vb='nvim ~/.bashrc'
+alias vv='nvim ~/.config/nvim/init.lua'
+alias vt='nvim ~/.tmux.conf'

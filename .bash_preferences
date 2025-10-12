@@ -1,7 +1,11 @@
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=-1
 HISTFILESIZE=-1
+
+# Set the default editor for most command line tools
+export EDITOR=vim
+export VISUAL=$EDITOR
 
 # Aliases
 alias r='source ~/.bashrc'

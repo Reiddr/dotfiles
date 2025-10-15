@@ -1,6 +1,0 @@
-# dotfiles stow ignore file
-
-.git/
-.gitignore
-README.md
-

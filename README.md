@@ -2,6 +2,7 @@
 - git
 - stow
 - neovim
+- fzf
 - tmux
 - tmux plugin manager 
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -26,3 +27,9 @@ TODO
 - ssh config?
 - vscode config?
 - pythonrc?
+
+
+## Switching OS
+
+- copy ssh keys
+- copy netbird dir from /etc/netbird/ or /var/lib/netbird

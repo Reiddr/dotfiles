@@ -1,3 +1,4 @@
 [alias]
-	lg = log --oneline --graph --decorate -10
+	lg = log --oneline --graph --decorate -n 20
+	lga = log --all --oneline --graph --decorate -n 20
 	st = status

@@ -3,6 +3,10 @@
 HISTSIZE=-1
 HISTFILESIZE=-1
 
+#FZF settings
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 # Set the default editor for most command line tools
 export EDITOR=vim
 export VISUAL=$EDITOR

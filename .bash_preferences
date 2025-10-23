@@ -19,3 +19,7 @@ alias v='nvim'
 alias vb='nvim ~/.bashrc'
 alias vv='nvim ~/.config/nvim/init.lua'
 alias vt='nvim ~/.tmux.conf'
+
+alias gs='git status'
+alias gl='git log --oneline --graph --decorate -n 20'
+alias gla='git log --oneline --graph --decorate --all'

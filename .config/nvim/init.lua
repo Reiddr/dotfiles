@@ -10,4 +10,6 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':source ~/.config/nvim/init.lua<CR>',
 vim.api.nvim_set_keymap('n', '<leader>ls', ':buffers<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>lf', ':b ', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>la', ':e #<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ff', ':find ', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>fd', ':Ex<CR>', {noremap = true, silent = true})
 

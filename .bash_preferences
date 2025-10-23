@@ -11,6 +11,9 @@ eval "$(fzf --bash)"
 export EDITOR=nvim
 export VISUAL=$EDITOR
 
+# Set TERM color to 24 bit
+export TERM=xterm-256color
+
 # Aliases
 alias r='source ~/.bashrc'
 alias ll='ls -lAh'

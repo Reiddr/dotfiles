@@ -2,6 +2,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorlineopt = 'line'
 vim.opt.path = vim.opt.path + "**"
+vim.opt.termguicolors = true
+
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<leader>m', ':!ctags -R<CR><CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})

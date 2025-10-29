@@ -59,6 +59,7 @@ keybind = ctrl+space>o=new_split:right
 keybind = ctrl+space>u=new_split:down
 keybind = ctrl+space>t=new_tab
 keybind = ctrl+space>w=close_tab:this
+keybind = shift+tab=next_tab
 
 keybind = ctrl+space>r=reload_config
 
@@ -70,6 +71,7 @@ shell-integration-features = no-title
 
 # window-decoration = false
 # gtk-tabs-location = hidden
+gtk-titlebar-style = tabs
 
 mouse-scroll-multiplier = 1
 

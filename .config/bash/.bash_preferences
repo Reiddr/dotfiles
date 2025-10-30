@@ -12,7 +12,7 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 
 # Set TERM color to 24 bit
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # Aliases
 alias r='source ~/.bashrc'
@@ -20,7 +20,7 @@ alias ll='ls -lAh'
 alias rr='. ranger'
 alias v='nvim'
 alias vb='nvim ~/.bashrc'
-alias vp='nvim ~/.bash_preferences'
+alias vp='nvim ~/.config/bash/.bash_preferences'
 alias vv='nvim ~/.config/nvim/init.lua'
 alias vt='nvim ~/.tmux.conf'
 alias vg='nvim ~/.config/ghostty/config'
@@ -28,3 +28,7 @@ alias vg='nvim ~/.config/ghostty/config'
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate -n 20'
 alias gla='git log --oneline --graph --decorate --all'
+
+# set up ps1 prompt
+source ~/.config/bash/git-prompt.sh
+

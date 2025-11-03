@@ -14,6 +14,12 @@ export VISUAL=$EDITOR
 # Set TERM color to 24 bit
 # export TERM=xterm-256color
 
+# DU but Good
+# simple function to get human readable disk usage summaries that includes hidden files
+dug(){
+	ls -A $@ | xargs -I {} sudo du -sh $@{}
+}
+
 # Aliases
 alias r='source ~/.bashrc'
 alias ll='ls -lAh'
@@ -29,6 +35,16 @@ alias gs='git status'
 alias gl='git log --oneline --graph --decorate -n 20'
 alias gla='git log --oneline --graph --decorate --all'
 
+# set some colors
+GREEN="\[\033[38;5;28m\]"
+PURPLE="\[\033[38;5;128m\]"
+YELLOW="\[\033[38;5;149m\]"
+BLUE="\[\033[0;34m\]"
+RED="\[\033[0;34m\]"
+WHITE="\[\033[0;37m\]"
+RESET="\[\033[m\]"
 # set up ps1 prompt
 source ~/.config/bash/git-prompt.sh
+
+export PS1="${GREEN}\w${PURPLE}\$(__git_ps1 ' (%s)')${WHITE}\$ ${RESET}"
 

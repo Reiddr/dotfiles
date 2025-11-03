@@ -67,11 +67,12 @@ font-size = 11
 
 # cursor-style = block
 
-shell-integration-features = no-title
+# shell-integration-features = no-title
+shell-integration = none
 
 # window-decoration = false
 # gtk-tabs-location = hidden
-gtk-titlebar-style = tabs
+# gtk-titlebar-style = tabs
 
 mouse-scroll-multiplier = 1
 

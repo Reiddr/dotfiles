@@ -64,11 +64,13 @@ keybind = shift+tab=next_tab
 keybind = ctrl+space>r=reload_config
 
 font-size = 11
+font-family = "Jetbrains Mono"
 
 # cursor-style = block
 
 # shell-integration-features = no-title
-shell-integration = none
+shell-integration-features = ssh-env
+# shell-integration = none
 
 # window-decoration = false
 # gtk-tabs-location = hidden

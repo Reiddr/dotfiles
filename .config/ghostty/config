@@ -66,6 +66,9 @@ keybind = ctrl+space>r=reload_config
 font-size = 11
 font-family = "Jetbrains Mono"
 
+mouse-hide-while-typing = true
+maximize = true
+window-new-tab-position = end
 # cursor-style = block
 
 # shell-integration-features = no-title

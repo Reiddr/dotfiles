@@ -9,10 +9,6 @@
 
 
 - navigate to this dir and use command 'stow .'
-- add the bash_preferences to your bashrc with: echo "source "~/.bash_preferences" >> ~/.bashrc"
-- add the gitconfig preferences to your local git config with "echo [include] path = "~/.gitconfig_preferences" >> ~/.gitconfig" 
-- start a tmux server and session with command 'tmux'
-- within the tmux window press 'Ctrl-Space' then 'I' to install tmux plugins
 
 
 

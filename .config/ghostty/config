@@ -57,6 +57,7 @@ keybind = ctrl+space>l=goto_split:right
 
 keybind = ctrl+space>o=new_split:right
 keybind = ctrl+space>u=new_split:down
+keybind = ctrl+shift+u=new_split:down
 keybind = ctrl+space>t=new_tab
 keybind = ctrl+space>w=close_tab:this
 keybind = shift+tab=next_tab

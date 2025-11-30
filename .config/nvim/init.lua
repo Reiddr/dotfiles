@@ -71,10 +71,13 @@ vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>r', ':source ~/.config/nvim/init.lua<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>ls', ':buffers<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>lf', ':b ', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>lc', ':reg<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<leader>lf', ':b ', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>la', ':e #<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>ff', ':find ', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>fd', ':Ex<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<leader>ff', ':find ', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>dd', ':Ex<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info

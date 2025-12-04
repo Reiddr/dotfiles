@@ -20,6 +20,12 @@ dug(){
 	ls -A $@ | xargs -I {} sudo du -sh $@{}
 }
 
+# list count
+# How many things are in the directory?
+lc(){
+	ls -1 $@ | wc -l
+}
+
 # Aliases
 alias r='source ~/.bashrc'
 alias ll='ls -lAh'

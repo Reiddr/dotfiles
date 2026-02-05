@@ -26,11 +26,18 @@ lc(){
 	ls -1 $@ | wc -l
 }
 
+# use lf to change directory
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
+
 # Aliases
 alias r='source ~/.bashrc'
 alias ll='ls -lAh'
-alias rr='. ranger'
+alias lf='lfcd' # always cd with lf
 alias v='nvim'
+alias vim='nvim'
 alias vb='nvim ~/.bashrc'
 alias vp='nvim ~/.bashrc.d/prefs_bashrc'
 alias vv='nvim ~/.config/nvim/init.lua'

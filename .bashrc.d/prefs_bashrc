@@ -21,9 +21,9 @@ dug(){
 }
 
 # list count
-# How many things are in the directory?
+# How many things are in the directory? (including hidden files)
 lc(){
-	ls -1 $@ | wc -l
+	ls -A1 $@ | wc -l
 }
 
 # use lf to change directory

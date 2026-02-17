@@ -35,6 +35,25 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+# ripgrep->fzf->vim [QUERY]
+# (v)im (s)earch
+vs() (
+  RELOAD='reload:rg --column --hidden --color=always --smart-case -g '!git/*' {q} || :'
+  OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
+            nvim {1} +{2}     # No selection. Open the current line in Vim.
+          else
+            nvim +cw -q {+f}  # Build quickfix list for the selected items.
+          fi'
+  fzf --disabled --ansi --multi \
+      --bind "start:$RELOAD" --bind "change:$RELOAD" \
+      --bind "enter:become:$OPENER" \
+      --bind "ctrl-o:execute:$OPENER" \
+      --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-/:toggle-preview' \
+      --delimiter : \
+      --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
+      --query "$*"
+)
+
 # Aliases
 alias r='source ~/.bashrc'
 alias ll='ls -lAh'

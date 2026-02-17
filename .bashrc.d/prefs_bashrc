@@ -39,9 +39,9 @@ lfcd () {
 # (v)im (s)earch
 vs() (
   RELOAD='reload:rg --column --hidden --color=always --smart-case -g '!git/*' {q} || :'
-  fzf --disabled --ansi --multi \
+  fzf --disabled --ansi \
       --bind "start:$RELOAD" --bind "change:$RELOAD" \
-      --bind "enter:become:nvim {1} +{2}" \    # No selection. Open the current line in Vim.
+      --bind "enter:become:nvim {1} +{2}" \
       --delimiter : \
       --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
       --query "$*"

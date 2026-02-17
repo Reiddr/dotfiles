@@ -3,6 +3,8 @@
   borderless = True
   inactive_color_offset = 1.0
 [keybindings]
+  cycle_next = <Primary>Page_Down
+  next_tab = <Primary>Tab
 [profiles]
   [[default]]
     visible_bell = True

@@ -1,6 +1,7 @@
 [global_config]
   window_state = maximise
   borderless = True
+  inactive_color_offset = 1.0
 [keybindings]
 [profiles]
   [[default]]
@@ -14,6 +15,7 @@
     font = JetBrains Mono Medium 11
     foreground_color = "#a9b1d6"
     show_titlebar = False
+    scrollbar_position = hidden
     scrollback_infinite = True
     palette = "#1a1b26:#f7768e:#9ece6a:#e0af68:#7aa2f7:#9a7ecc:#4abaaf:#acb0d0:#4e5173:#f7768e:#9ece6a:#e0af68:#7aa2f7:#9a7ecc:#4abaaf:#acb0d0"
     use_system_font = False

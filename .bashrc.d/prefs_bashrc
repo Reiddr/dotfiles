@@ -16,6 +16,7 @@ export TERM=xterm-256color
 
 # Set man pager to bat for nice colors
 export MANPAGER="bat -plman"
+export BAT_THEME='tokyonight_night'
 
 # DU but Good
 # simple function to get human readable disk usage summaries that includes hidden files

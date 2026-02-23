@@ -53,7 +53,7 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.opt.path = vim.opt.path + "**"
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 vim.g.have_nerd_font = true
 
 vim.cmd("command! -nargs=1 -complete=help H :enew | set buftype=help | :h <args>")

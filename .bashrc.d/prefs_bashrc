@@ -58,15 +58,12 @@ alias r='source ~/.bashrc'
 alias ll='ls -lAh'
 alias lf='lfcd' # always cd with lf
 alias v='nvim'
-alias vim='nvim'
 alias vb='nvim ~/.bashrc'
 alias vp='nvim ~/.bashrc.d/prefs_bashrc'
 alias vv='nvim ~/.config/nvim/init.lua'
 alias vt='nvim ~/.tmux.conf'
 alias vg='nvim ~/.config/ghostty/config'
 
-alias gs='git status'
-alias gd='git diff'
 alias gl='git log --oneline --graph --decorate -n 20'
 alias gla='git log --oneline --graph --decorate --all'
 

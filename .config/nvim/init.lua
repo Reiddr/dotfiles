@@ -51,6 +51,8 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+vim.o.conceallevel = 1
+
 vim.opt.path = vim.opt.path + "**"
 -- vim.opt.termguicolors = true
 vim.g.have_nerd_font = false
@@ -721,6 +723,22 @@ require("lazy").setup({
 		},
 	},
 
+	{
+		"obsidian-nvim/obsidian.nvim",
+		version = "*", -- use latest release, remove to use latest commit
+		ft = "markdown",
+		---@module 'obsidian'
+		---@type obsidian.config
+		opts = {
+			legacy_commands = false, -- this will be removed in the next major release
+			workspaces = {
+				{
+					name = "NotesObsidian",
+					path = "/mnt/large/documents/NotesObsidian/",
+				},
+			},
+		},
+	},
 	{ -- You can easily change to a different colorscheme.
 		-- Change the name of the colorscheme plugin below, and then
 		-- change the command in the config to whatever the name of that colorscheme is.

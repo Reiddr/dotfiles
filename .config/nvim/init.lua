@@ -55,7 +55,7 @@ vim.o.conceallevel = 1
 
 vim.opt.path = vim.opt.path + "**"
 -- vim.opt.termguicolors = true
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 vim.cmd("command! -nargs=1 -complete=help H :enew | set buftype=help | :h <args>")
 

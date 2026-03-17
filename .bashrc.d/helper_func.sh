@@ -21,7 +21,6 @@ printbar () {
 	local empty="."
 	local n=$(clipval $1 0 100)
 	local f=$((n/5))
-	printf "n: %d f: %d\n" "$n" "$f"
 	printf "["
 	for i in {1..20}; do
 		if [[ i -le f ]]; then 
@@ -33,15 +32,36 @@ printbar () {
 	printf "]"
 }
 
-adj_bar () {
+getbrightness () {
+	echo $(brightnessctl -qPd intel_backlight g)
+}
+
+setbrightness () {
+	brightnessctl -qd intel_backlight s $1%
+}
+
+adjbar () {
 	
 	printf "(q)uit --(h) (l)++ \n"
+	local p=$($1)
+	printf "\r%s" "$(printbar $p)"
+	local step=5
 	while true; do
 		read -n1 -s key
 		if [[ $key == 'q' ]]; then
 			printf "\rExiting...\n"
 			break
+		elif [[ $key == 'h' ]]; then
+			p=$p-$step
+		elif [[ $key == 'l' ]]; then
+			p=$p+$step
 		fi
-		printf "\rKey Pressed: %s" "$key"
+		p=$(getpercent $p 0 100)
+		$($2 $p)
+		printf "\r%s" "$(printbar $p)"
 	done
+}
+
+adjbrightness () {
+	adjbar getbrightness setbrightness
 }

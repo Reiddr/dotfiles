@@ -3,7 +3,7 @@
 shopt -s histappend
 
 # Append and reload history after each command
-PROMPT_COMMAND="history -a; history -n"
+# PROMPT_COMMAND="history -a; history -n"
 
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=-1

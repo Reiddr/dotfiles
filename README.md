@@ -29,3 +29,14 @@ TODO
 
 - copy ssh keys
 - copy netbird dir from /etc/netbird/ or /var/lib/netbird
+- set selinux
+- mount drives (copy the etc file?)
+
+## NVIM config todo
+- switch to vim.pack
+- use lspconfig plugin from neovim
+- use treesitter plugin from neovim
+- set up hover, goto definition, find references
+- use tokyo night and which key from folke
+- go over settings and remove ones that have sensible defaults already
+- simplify hotkeys, perhaps revert back to :w rather that <leader>w

@@ -19,11 +19,17 @@ vim.o.confirm = true
 vim.o.conceallevel = 1
 vim.opt.path = vim.opt.path + "**"
 
--- Commands and remaps
+-- Remaps
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
--- vim.cmd("command! -nargs=1 -complete=help H :enew | set buftype=help | :h <args>")
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>pu", ":lua vim.pack.update()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>r", ":restart<CR>", { noremap = true, silent = true })
+
+-- Autocommands
+-- vim.cmd("command! -nargs=1 -complete=help H :enew | set buftype=help | :h <args>")
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
@@ -31,8 +37,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
-vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 
 -- Plugins
 vim.pack.add({'https://github.com/folke/tokyonight.nvim'})
@@ -50,4 +54,4 @@ require('nvim-treesitter').install({ 'python',}):wait(300000) -- wait max. 5 min
 vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
 vim.lsp.enable('pyright')
 vim.lsp.enable('lua_ls')
--- - vim.lsp.enable('clang')
+vim.lsp.enable('clang')

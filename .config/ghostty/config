@@ -65,7 +65,7 @@ keybind = shift+tab=next_tab
 keybind = ctrl+space>r=reload_config
 
 font-size = 12
-# font-family = "Jetbrains Mono"
+font-family = "Jetbrains Mono Nerd Font"
 
 mouse-hide-while-typing = true
 maximize = true

@@ -3,9 +3,8 @@
 - stow
 - neovim
 - fzf
-- tmux
-- tmux plugin manager 
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+- ripgrep
+- ghostty
 
 
 - navigate to this dir and use command 'stow .'

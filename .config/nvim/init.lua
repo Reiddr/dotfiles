@@ -15,9 +15,13 @@ vim.o.inccommand = "split"
 vim.o.cursorline = true
 vim.opt.cursorlineopt = "line"
 vim.o.scrolloff = 12
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 vim.o.confirm = true
 vim.o.conceallevel = 1
 vim.opt.path = vim.opt.path + "**"
+
 
 -- Remaps
 vim.g.mapleader = " "
@@ -30,6 +34,8 @@ vim.api.nvim_set_keymap("n", "<leader>r", ":restart<CR>", { noremap = true, sile
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("n", "<leader>ff", ":find ")
+vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Autocommands
@@ -51,6 +57,8 @@ vim.cmd.colorscheme('tokyonight-night')
 
 vim.pack.add({'https://github.com/folke/which-key.nvim'})
 require('which-key').setup()
+
+vim.cmd('packadd nvim.undotree')
 
 vim.pack.add({'https://github.com/nvim-treesitter/nvim-treesitter'})
 require('nvim-treesitter').install({ 'python',}):wait(300000) -- wait max. 5 minutes

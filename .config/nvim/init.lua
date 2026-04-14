@@ -63,9 +63,9 @@ require('which-key').setup()
 vim.cmd('packadd nvim.undotree')
 
 vim.pack.add({'https://github.com/nvim-treesitter/nvim-treesitter'})
-require('nvim-treesitter').install({ 'python', 'zig', 'markdown', 'cmake', 'csv', 'dockerfile', 'bash', 'make', 'markdown_inline', 'sql', 'lua', 'vim', 'vimdoc'}):wait(300000) -- wait max. 5 minutes
+require('nvim-treesitter').install({ 'python', 'zig', 'markdown', 'cmake', 'csv', 'dockerfile', 'bash', 'make', 'markdown_inline', 'sql', 'lua', 'vim', 'vimdoc', 'c'}):wait(300000) -- wait max. 5 minutes
 
 vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
 vim.lsp.enable('pyright')
 vim.lsp.enable('lua_ls')
-vim.lsp.enable('clang')
+vim.lsp.enable('clangd')

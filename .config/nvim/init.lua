@@ -21,6 +21,7 @@ vim.o.expandtab = true
 vim.o.confirm = true
 vim.o.conceallevel = 1
 vim.opt.completeopt = {"fuzzy", "menu", "menuone", "noinsert", "popup"}
+vim.opt.wildoptions = {"fuzzy", "pum"}
 vim.o.autocomplete = true
 vim.opt.path = vim.opt.path + "**"
 

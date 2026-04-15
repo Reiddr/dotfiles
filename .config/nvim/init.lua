@@ -20,8 +20,9 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.confirm = true
 vim.o.conceallevel = 1
+vim.opt.completeopt = {"fuzzy", "menu", "menuone", "noinsert", "popup"}
+vim.o.autocomplete = true
 vim.opt.path = vim.opt.path + "**"
-
 
 -- Remaps
 vim.g.mapleader = " "
@@ -39,6 +40,7 @@ vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>u", ":Undotree<CR>")
 
 -- Autocommands
 -- vim.cmd("command! -nargs=1 -complete=help H :enew | set buftype=help | :h <args>")

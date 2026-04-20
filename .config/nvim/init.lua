@@ -15,8 +15,6 @@ vim.o.inccommand = "split"
 vim.o.cursorline = true
 vim.opt.cursorlineopt = "line"
 vim.o.scrolloff = 12
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.confirm = true
 vim.o.conceallevel = 1
@@ -36,9 +34,9 @@ vim.api.nvim_set_keymap("n", "<leader>r", ":restart<CR>", { noremap = true, sile
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>ff", ":find ")
 vim.keymap.set("n", "<leader>e", ":Ex<CR>")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>u", ":Undotree<CR>")

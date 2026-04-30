@@ -70,7 +70,7 @@ alias vv='nvim ~/.config/nvim/init.lua'
 alias vt='nvim ~/.tmux.conf'
 alias vg='nvim ~/.config/ghostty/config'
 
-alias gl='git log --oneline --graph --decorate --all -n 40'
+alias gl='git log --graph --decorate --color=always --date=short -n 20 --pretty=format:"%C(auto)%>|(15)%h %C(green)%ad %C(blue)%<(10,trunc)%an %C(reset)%s %C(auto)%d"'
 
 # set some colors
 GREEN="\[\033[38;5;28m\]"

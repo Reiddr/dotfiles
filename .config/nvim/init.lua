@@ -22,6 +22,7 @@ vim.opt.completeopt = {"fuzzy", "menu", "menuone", "noinsert", "popup"}
 vim.opt.wildoptions = {"fuzzy", "pum"}
 vim.o.autocomplete = true
 vim.opt.path = vim.opt.path + "**"
+-- vim.opt.clipboard:append("unnamedplus")
 
 -- Remaps
 vim.g.mapleader = " "
@@ -40,6 +41,9 @@ vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>u", ":Undotree<CR>")
+vim.keymap.set("v", "p", '"_dP', { desc = "Paste without yanking" })
+vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Autocommands
 -- vim.cmd("command! -nargs=1 -complete=help H :enew | set buftype=help | :h <args>")
@@ -63,8 +67,8 @@ require('which-key').setup()
 
 vim.cmd('packadd nvim.undotree')
 
-vim.pack.add({'https://github.com/nvim-treesitter/nvim-treesitter'})
-require('nvim-treesitter').install({ 'python', 'zig', 'markdown', 'cmake', 'csv', 'dockerfile', 'bash', 'make', 'markdown_inline', 'sql', 'lua', 'vim', 'vimdoc', 'c'}):wait(300000) -- wait max. 5 minutes
+-- vim.pack.add({'https://github.com/nvim-treesitter/nvim-treesitter'})
+-- require('nvim-treesitter').install({ 'python', 'zig', 'markdown', 'cmake', 'csv', 'dockerfile', 'bash', 'make', 'markdown_inline', 'sql', 'lua', 'vim', 'vimdoc', 'c'}):wait(300000) -- wait max. 5 minutes
 
 vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
 vim.lsp.enable('pyright')

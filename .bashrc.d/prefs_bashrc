@@ -45,7 +45,7 @@ lfcd () {
 # ripgrep->fzf->vim [QUERY]
 # (v)im (s)earch
 vs() (
-  RELOAD='reload:rg --column --hidden --color=always --smart-case -g '!git/*' {q} || :'
+  RELOAD='reload:rg --column --hidden --color=always --smart-case -g '!*git/*' {q} || :'
   fzf --disabled --ansi \
       --bind "start:$RELOAD" --bind "change:$RELOAD" \
       --bind "enter:become:nvim {1} +{2}" \
@@ -54,7 +54,7 @@ vs() (
       --query "$*"
 )
 vf() (
-  fd -u -t f -E '.git/*' -E '.pyc' | \
+  fd -u -t f -E '*git/*' -E '.pyc' | \
   fzf --bind "enter:become:nvim {}" \
       --preview 'bat --style=full --color=always {}' \
 )

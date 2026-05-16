@@ -18,6 +18,7 @@ vim.o.scrolloff = 12
 vim.o.expandtab = true
 vim.o.confirm = true
 vim.o.conceallevel = 1
+vim.opt.showmatch = true
 vim.opt.completeopt = {"fuzzy", "menu", "menuone", "noinsert", "popup"}
 vim.opt.wildoptions = {"fuzzy", "pum"}
 vim.o.winborder = "rounded"
@@ -72,6 +73,9 @@ vim.cmd('packadd nvim.undotree')
 -- require('nvim-treesitter').install({ 'python', 'zig', 'markdown', 'cmake', 'csv', 'dockerfile', 'bash', 'make', 'markdown_inline', 'sql', 'lua', 'vim', 'vimdoc', 'c'}):wait(300000) -- wait max. 5 minutes
 
 vim.pack.add({'https://github.com/neovim/nvim-lspconfig'})
+vim.lsp.inlay_hint.enable(true)
+vim.lsp.inline_completion.enable()
 vim.lsp.enable('pyright')
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd')
+

@@ -29,7 +29,7 @@ TODO
 - copy ssh keys
 - copy netbird dir from /etc/netbird/ or /var/lib/netbird
 - set selinux
-- mount drives (copy the etc file?)
+- mount drives (copy the fstab file?)
 
 ## NVIM config todo
 - switch to vim.pack

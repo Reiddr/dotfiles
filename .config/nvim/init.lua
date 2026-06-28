@@ -57,7 +57,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.cmd.colorscheme('sorbet')
+vim.cmd.colorscheme('habamax')
 
 vim.pack.add({'https://github.com/folke/which-key.nvim'})
 require('which-key').setup()

@@ -57,12 +57,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Plugins
-vim.pack.add({'https://github.com/folke/tokyonight.nvim'})
-require('tokyonight').setup({
-  style = 'night',
-})
-vim.cmd.colorscheme('tokyonight-night')
+vim.cmd.colorscheme('habamax')
 
 vim.pack.add({'https://github.com/folke/which-key.nvim'})
 require('which-key').setup()
